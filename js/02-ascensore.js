@@ -10,7 +10,6 @@
 */
 
 // # Fase di preparazione
-let i = 0
 
 // # Fase di raccolta dati
 const destinazione = parseInt(prompt("A quale piano vuoi andare?"))
@@ -21,10 +20,8 @@ if (isNaN(destinazione) || destinazione < 0) {
   alert("Piano non valido")
 }
 else {
-  do {
+  for (let i = 0; i < destinazione + 1; i++) {
     console.log(`Piano ${i}`)
-    i++
   }
-  while (i <= destinazione)
-  alert(`Sei arrivato al piano ${i - 1 /* in alternativa direttamente destinazione*/}`)
+  alert(`Sei arrivato al piano ${destinazione}`)
 }
